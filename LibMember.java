@@ -1,28 +1,25 @@
-package com.company;
-
 import java.util.Arrays;
 
 public class LibMember {
-
     public String firstName;
     public String lastName;
     public char gender;
     public long cprNum;
     public String teleNum;
-public Book []booksIssued;
-public int numBooksIssued;
+    public Book []booksIssued;
+    public int numBooksIssued;
 
-public LibMember(){
+    public LibMember(){
+        firstName =null;
+        lastName =null;
+        teleNum = null;
+        gender = ' ';
+        cprNum = 0L;
+        booksIssued = null;
+        numBooksIssued = 0;
+        booksIssued = new Book[10];
+    }
 
-    firstName =null;
-    lastName =null;
-    teleNum = null;
-    gender = ' ';
-    cprNum = 0L;
-    booksIssued = null;
-    numBooksIssued = 0;
-    booksIssued = new Book[10];
-}
     public LibMember(String firstName, String lastName, char gender, long cprNum, String teleNum) {
         this.firstName = firstName;
         this.lastName = lastName;
@@ -91,8 +88,6 @@ public LibMember(){
         this.numBooksIssued = numBooksIssued;
     }
 
-
-
     public String toString() {
         return "LibMember{" +
                 "firstName='" + firstName + '\'' +
@@ -126,5 +121,4 @@ public LibMember(){
             return this.getNumBooksIssued() == var.getNumBooksIssued();
         }
     }
-
 }

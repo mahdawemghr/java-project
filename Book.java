@@ -1,17 +1,14 @@
-package com.company;
-
 import java.util.Objects;
 
 public class Book {
-public String title;
-public String author1;
-public String author2;
-public String publisher;
-public int yearPublication;
-public String isbn;
-public long accessionNum;
-public LibMember issuedTo;
-
+    public String title;
+    public String author1;
+    public String author2;
+    public String publisher;
+    public int yearPublication;
+    public String isbn;
+    public long accessionNum;
+    public LibMember issuedTo;
 
     public Book(){
         this.title = this.author1 = this.author2 = this.publisher = null;
@@ -19,7 +16,6 @@ public LibMember issuedTo;
         this.accessionNum = 1000L;
         this.issuedTo = null;
         this.yearPublication = 0;
-
     }
 
     public Book(String title, String author1, String author2, String publisher, int yearPublication, String isbn, long accessionNum, LibMember issuedTo) {
