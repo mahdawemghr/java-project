@@ -89,6 +89,19 @@ public class LibMember { // questions two
         this.numBooksIssued = numBooksIssued;
     }
 
+    public void addBookIssued(Book book) {
+        booksIssued[booksIssued.length - 1] = book;
+    }
+
+    public void removeBookIssued(Book book) {
+        for (int i = 0; i < booksIssued.length; i++) {
+            if (booksIssued[i].equals(book)) {
+                booksIssued[i] = null;
+                break;
+            }
+        }
+    }
+
     // toString methods 
     public String toString() {
         return "LibMember" + '\n' +

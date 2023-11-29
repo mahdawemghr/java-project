@@ -8,10 +8,8 @@ public class LibrarySystem<E> { // questions three
     private int membersListSize;
 
     LibrarySystem() { // default constructor
-        this.booksList = new LinkedList<>(); //! empty linked list
-        this.membersList = new LinkedList<>(); //! empty linked list 
-        //? fixed by Sara
-        
+        this.booksList = new LinkedList<>(); 
+        this.membersList = new LinkedList<>(); 
         booksListSize = 0;
         membersListSize = 0;
     }
@@ -65,7 +63,7 @@ public class LibrarySystem<E> { // questions three
     }
 
     // delete member method
-    public boolean deleteMember(long cprNum) { //! change it to long 
+    public boolean deleteMember(long cprNum) { 
         for (LibMember member: membersList) {
             if (member.getCprNum() == cprNum) {
                 if (member.getBookslssued().length > 0) {
@@ -91,7 +89,7 @@ public class LibrarySystem<E> { // questions three
     }
 
     // search member method
-    public int searchMember(long cprNum) { //! change it to long
+    public int searchMember(long cprNum) { 
         for (int i = 0; i < membersList.size(); i++) {
             if (membersList.get(i).getCprNum() == cprNum) {
                 return i; // Member found at index i
@@ -156,7 +154,7 @@ public class LibrarySystem<E> { // questions three
             return false; // Book cannot be issued
         }
 
-        member.addBookIssued(book); //! error
+        member.addBookIssued(book);
         book.setIssuedTo(member);
         return true;
     }
@@ -176,7 +174,7 @@ public class LibrarySystem<E> { // questions three
         }
 
         LibMember member = book.getIssuedTo();
-        member.removeBookIssued(book); //! error
+        member.removeBookIssued(book);
         book.setIssuedTo(null);
         return true;
     }
