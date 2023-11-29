@@ -32,7 +32,7 @@ public class LibraryMain {
                 System.out.print("\tyear publication: ");
                 int yearPublication = input.nextInt();
 
-                System.out.print("\tisbn");
+                System.out.print("\tisbn: ");
                 String isbn = input.next();
 
                 System.out.print("\taccession Num: ");
@@ -43,11 +43,18 @@ public class LibraryMain {
             }
 
             if(choice == 2) {
+                System.out.print("write the accession Num: ");
+                long accessionNum = input.nextLong();
 
+                if(object.deleteBook(accessionNum)) {
+                    System.out.println("the book has been deleted succesfully.");
+                } else {
+                    System.out.println("sorry we could not found the book.");
+                }
             }
 
             if(choice == 3) {
-                
+                System.out.println(object.toStringBook());
             }
         } while(!(choice == 5));
     }

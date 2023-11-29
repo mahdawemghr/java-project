@@ -91,15 +91,14 @@ public class LibMember { // questions two
 
     // toString methods 
     public String toString() {
-        return "LibMember{" +
-                "firstName='" + firstName + '\'' +
-                ", lastName='" + lastName + '\'' +
-                ", gender=" + gender +
-                ", cprNum=" + cprNum +
-                ", teleNum='" + teleNum + '\'' +
-                ", booksIssued=" + Arrays.toString(booksIssued) +
-                ", numBooksIssued=" + numBooksIssued +
-                '}';
+        return "LibMember" + '\n' +
+                "\tfirstName: " + firstName + '\n' +
+                "\tlastName: " + lastName + '\n' +
+                "\tgender: " + gender + '\n' +
+                "\tcprNum: " + cprNum + '\n' +
+                "\tteleNum: " + teleNum + '\n' +
+                "\tbooksIssued: " + Arrays.toString(booksIssued) + '\n' +
+                "\tnumBooksIssued: " + numBooksIssued + '\n';
     }
 
     // equals methods 

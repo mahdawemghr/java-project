@@ -193,5 +193,27 @@ public class LibrarySystem<E> { // questions three
         }
     }
 
+    public String toStringBook() {
+        String str = " ";
+        LinkedList<Book> b = booksList;
+        
+        for(int i = 0; i < b.size(); i++) {
+            str += (b.toString() + "\n");
+        }
 
+        return str;
+
+    }
+
+    public String toStringmembers() {
+        String str = " ";
+        LinkedList<LibMember> b = membersList;
+        
+        for(int i = 0; i < b.size(); i++) {
+            str += (b.toString() + "\n");
+        }
+
+        return str;
+
+    }
 }

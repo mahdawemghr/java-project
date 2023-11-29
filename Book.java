@@ -120,15 +120,14 @@ public class Book { // questions one
 
     // toString methods
     public String toString() {
-        return "Book{" +
-                "title='" + title + '\'' +
-                ", author1='" + author1 + '\'' +
-                ", author2='" + author2 + '\'' +
-                ", publisher='" + publisher + '\'' +
-                ", yearPublication=" + yearPublication +
-                ", isbn=" + isbn +
-                ", accessionNum=" + accessionNum +
-                ", issuedTo=" + issuedTo +
-                '}';
+        return "Book" + '\n'+
+                "\ttitle: '" + title + '\n' +
+                "\tauthor1: '" + author1 + '\n' +
+                "\tauthor2: '" + author2 + '\n' +
+                "\tpublisher: '" + publisher + '\n' +
+                "\tyearPublication: " + yearPublication + '\n' +
+                "\tisbn: " + isbn + '\n' + 
+                "\taccessionNum: " + accessionNum + '\n' +
+                "\tissuedTo: " + issuedTo + '\n';
     }
 }
