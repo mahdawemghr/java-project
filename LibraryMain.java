@@ -26,7 +26,8 @@ public class LibraryMain {
                     System.out.println("\t1 - Add a book to the library.");
                     System.out.println("\t2 - Remove a book from the library.");
                     System.out.println("\t3 - List all books in the library.");
-                    System.out.println("\t4 - Search for a specific book by title or author.");
+                    System.out.println("\t4 - Search for a specific book by title.");
+                    System.out.println("\t5 - Search for a specific book by author.");
                     System.out.println("\t0 - Return to menu");
                     choice1 = input.nextInt();
 
@@ -91,6 +92,13 @@ public class LibraryMain {
                         } else {
                             System.out.println(object.getBook(object.searchBook(accessionNum)));
                         }
+                    }
+
+                    if(choice1 == 5) {
+                        System.out.print("please enter the name of the author CPR number: ");
+                        long cprNumberAuthor = input.nextLong();
+
+                        object.printBooksIssued(cprNumberAuthor);
                     }
                 }
             } while (!(choice1 == 0));
