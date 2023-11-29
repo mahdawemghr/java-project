@@ -9,7 +9,9 @@ public class LibrarySystem<E> { // questions three
 
     LibrarySystem() { // default constructor
         this.booksList = new LinkedList<>(); //! empty linked list
-        this.membersList = new LinkedList<>();
+        this.membersList = new LinkedList<>(); //! empty linked list 
+        //? fixed by Sara
+        
         booksListSize = 0;
         membersListSize = 0;
     }
