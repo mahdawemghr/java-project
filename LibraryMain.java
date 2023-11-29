@@ -16,10 +16,10 @@ public class LibraryMain {
             choice = input.nextInt();
 
             if(choice < 0 || 3 <= choice) {
-                        System.out.println("Invalid option!");
-                        TimeUnit.SECONDS.sleep(2);
-                        continue;
-                    }
+                System.out.println("Invalid option!");
+                TimeUnit.SECONDS.sleep(2);
+                continue;
+            }
 
             do {
                 if(choice == 1) {
@@ -143,5 +143,4 @@ public class LibraryMain {
             
         } while(!(choice == 0));
     }
-
 }
