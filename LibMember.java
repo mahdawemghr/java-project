@@ -1,6 +1,6 @@
 import java.util.Arrays;
 
-public class LibMember {
+public class LibMember { // questions two 
     public String firstName;
     public String lastName;
     public char gender;
@@ -9,7 +9,7 @@ public class LibMember {
     public Book []booksIssued;
     public int numBooksIssued;
 
-    public LibMember(){
+    public LibMember(){ // default constructor 
         firstName =null;
         lastName =null;
         teleNum = null;
@@ -20,7 +20,7 @@ public class LibMember {
         booksIssued = new Book[10];
     }
 
-    public LibMember(String firstName, String lastName, char gender, long cprNum, String teleNum) {
+    public LibMember(String firstName, String lastName, char gender, long cprNum, String teleNum) { // second constructor
         this.firstName = firstName;
         this.lastName = lastName;
         this.gender = gender;
@@ -31,63 +31,65 @@ public class LibMember {
         booksIssued = new Book[10];
     }
 
-
+    // whole get methods
     public String getFirstName() {
         return firstName;
-    }
-
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
     }
 
     public String getLastName() {
         return lastName;
     }
 
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
-    }
-
     public char getGender() {
         return gender;
-    }
-
-    public void setGender(char gender) {
-        this.gender = gender;
     }
 
     public long getCprNum() {
         return cprNum;
     }
 
-    public void setCprNum(long cprNum) {
-        this.cprNum = cprNum;
-    }
-
     public String getTeleNum() {
         return teleNum;
     }
 
-    public void setTeleNum(String teleNum) {
-        this.teleNum = teleNum;
-    }
     public Book[] getBookslssued() {
         return booksIssued;
-    }
-
-    public void setBookslssued(Book[] var1) {
-
-    booksIssued = var1;
     }
 
     public int getNumBooksIssued() {
         return numBooksIssued;
     }
 
+    // whole set methods
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
+
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
+
+    public void setGender(char gender) {
+        this.gender = gender;
+    }
+
+    public void setCprNum(long cprNum) {
+        this.cprNum = cprNum;
+    }
+
+    public void setTeleNum(String teleNum) {
+        this.teleNum = teleNum;
+    }
+
+    public void setBookslssued(Book[] var1) {
+        booksIssued = var1;
+    }
+
     public void setNumBooksIssued(int numBooksIssued) {
         this.numBooksIssued = numBooksIssued;
     }
 
+    // toString methods 
     public String toString() {
         return "LibMember{" +
                 "firstName='" + firstName + '\'' +
@@ -100,6 +102,7 @@ public class LibMember {
                 '}';
     }
 
+    // equals methods 
     public boolean Equals(LibMember var) {
         if (this == var) {
             return true;

@@ -1,6 +1,4 @@
-import java.util.Objects;
-
-public class Book {
+public class Book { // questions one
     public String title;
     public String author1;
     public String author2;
@@ -10,7 +8,7 @@ public class Book {
     public long accessionNum;
     public LibMember issuedTo;
 
-    public Book(){
+    public Book(){ // default constructor 
         this.title = this.author1 = this.author2 = this.publisher = null;
         this.isbn = "0000000000000";
         this.accessionNum = 1000L;
@@ -18,7 +16,7 @@ public class Book {
         this.yearPublication = 0;
     }
 
-    public Book(String title, String author1, String author2, String publisher, int yearPublication, String isbn, long accessionNum, LibMember issuedTo) {
+    public Book(String title, String author1, String author2, String publisher, int yearPublication, String isbn, long accessionNum) { // second constructor
         this.title = title;
         this.author1 = author1;
         this.author2 = author2;
@@ -26,9 +24,10 @@ public class Book {
         this.yearPublication = yearPublication;
         this.isbn = isbn;
         this.accessionNum = accessionNum;
-        this.issuedTo = issuedTo;
+        this.issuedTo = null; //! change it to null
     }
 
+    // whole set methods 
     public void setTitle(String title) {
         this.title = title;
     }
@@ -61,6 +60,7 @@ public class Book {
         this.issuedTo = issuedTo;
     }
 
+    // whole get methods
     public String getTitle() {
         return title;
     }
@@ -93,6 +93,7 @@ public class Book {
         return issuedTo;
     }
 
+    // equals methods
     public boolean Equals(Book var1) {
         if (this == var1) {
             return true;
@@ -117,6 +118,7 @@ public class Book {
         }
     }
 
+    // toString methods
     public String toString() {
         return "Book{" +
                 "title='" + title + '\'' +
