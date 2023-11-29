@@ -100,6 +100,22 @@ public class LibrarySystem<E> { // questions three
         return -1; // Member not found
     }
 
+    public String getMember(int index) {
+        if (index >= 0 && index < membersList.size()) {
+            return membersList.get(index).toString();
+        } else {
+                return "Invalid Index";
+            }
+    }
+
+    public String getBook(int index) {
+        if (index >= 0 && index < booksList.size()) {
+            return booksList.get(index).toString();
+        } else {
+                return "Invalid Index";
+            }
+    }
+
     // is empty methods 
     public boolean isEmptyBooksList() {
         return booksList.isEmpty();
@@ -205,7 +221,7 @@ public class LibrarySystem<E> { // questions three
 
     }
 
-    public String toStringmembers() {
+    public String toStringMembers() {
         String str = " ";
         LinkedList<LibMember> b = membersList;
         

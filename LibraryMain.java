@@ -81,6 +81,17 @@ public class LibraryMain {
                             System.out.println(object.toStringBook());
                         }
                     }
+
+                    if(choice1 == 4) {
+                        System.out.print("please write the accession Num Number: ");
+                        long accessionNum = input.nextLong();
+
+                        if(object.searchBook(accessionNum) == -1) {
+                            System.out.println("we could not find this book");
+                        } else {
+                            System.out.println(object.getBook(object.searchBook(accessionNum)));
+                        }
+                    }
                 }
             } while (!(choice1 == 0));
 
@@ -120,22 +131,33 @@ public class LibraryMain {
                     }
 
                     if(choice1 == 2) {
-                        System.out.print("write the accession Num: ");
-                        long accessionNum = input.nextLong();
+                        System.out.print("write the CPR Num: ");
+                        long cprNum = input.nextLong();
 
-                        if(object.deleteBook(accessionNum)) {
-                            System.out.println("the book has been deleted succesfully.");
+                        if(object.deleteMember(cprNum)) {
+                            System.out.println("the member has been deleted succesfully.");
                         } else {
-                            System.out.println("sorry we could not found the book.");
+                            System.out.println("sorry we could not found the member.");
                         }
                     }
 
                     if(choice1 == 3) {
-                        if(object.toStringBook().equalsIgnoreCase(" ")) {
+                        if(object.toStringMembers().equalsIgnoreCase(" ")) {
                             System.out.println("there are no member yet.");
                             TimeUnit.SECONDS.sleep(2);
                         } else {
-                            System.out.println(object.toStringBook());
+                            System.out.println(object.toStringMembers());
+                        }
+                    }
+
+                    if(choice1 == 4) {
+                        System.out.print("please write the CPR Number: ");
+                        long cprNum = input.nextLong();
+
+                        if(object.searchMember(cprNum) == -1) {
+                            System.out.println("we could not find this member");
+                        } else {
+                            System.out.println(object.getMember(object.searchMember(cprNum)));
                         }
                     }
                 } while (!(choice1 == 0));
