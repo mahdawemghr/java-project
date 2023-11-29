@@ -140,7 +140,7 @@ public class LibrarySystem<E> { // questions three
             return false; // Book cannot be issued
         }
 
-        member.addBookIssued(book);
+        member.addBookIssued(book); //! error
         book.setIssuedTo(member);
         return true;
     }
@@ -160,7 +160,7 @@ public class LibrarySystem<E> { // questions three
         }
 
         LibMember member = book.getIssuedTo();
-        member.removeBookIssued(book);
+        member.removeBookIssued(book); //! error
         book.setIssuedTo(null);
         return true;
     }
