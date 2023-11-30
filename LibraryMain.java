@@ -12,10 +12,11 @@ public class LibraryMain {
             System.out.println("Menu:");
             System.out.println("\t1 - Book manager.");
             System.out.println("\t2 - Member manager.");
+            System.out.println("\t3 - Add member & book.");
             System.out.println("\t0 - Quit application.");
             choice = input.nextInt();
 
-            if(choice < 0 || 3 <= choice) {
+            if(choice < 0 || 4 <= choice) {
                 System.out.println("Invalid option!");
                 TimeUnit.SECONDS.sleep(2);
                 continue;
@@ -95,10 +96,10 @@ public class LibraryMain {
                     }
 
                     if(choice1 == 5) {
-                        System.out.print("please enter the name of the author CPR number: ");
-                        long cprNumberAuthor = input.nextLong();
+                        System.out.print("please enter the accession number: ");
+                        long accessionNum = input.nextLong();
 
-                        object.printBooksIssued(cprNumberAuthor);
+                        object.printBooksIssued(accessionNum);
                     }
                 }
             } while (!(choice1 == 0));
@@ -109,6 +110,7 @@ public class LibraryMain {
                     System.out.println("\t2 - Remove a member.");
                     System.out.println("\t3 - List all members.");
                     System.out.println("\t4 - Search for a member.");
+                    System.out.println("\t5 - Search the book issued to member.");
                     System.out.println("\t0 - Return to menu");
                     choice1 = input.nextInt();
 
@@ -168,8 +170,25 @@ public class LibraryMain {
                             System.out.println(object.getMember(object.searchMember(cprNum)));
                         }
                     }
+
+                    if(choice1 == 5) {
+                        System.out.print("please write the CPR number of the member you want: ");
+                        long cpr = input.nextLong();
+
+                        object.printBooksIssued(cpr);
+                    }
                 } while (!(choice1 == 0));
             }
+
+            if(choice == 3) {
+                System.out.print("\tenter the CPR:");
+                long cpr = input.nextLong();
+
+                System.out.print("\tenter the accession Number:");
+                long accessionNum = input.nextLong();
+                object.issueBook(accessionNum, cpr);
+            }
+
             
         } while(!(choice == 0));
     }

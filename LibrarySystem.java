@@ -136,14 +136,14 @@ public class LibrarySystem<E> { // questions three
         Book book = null;
         LibMember member = null;
 
-        for (Book b : booksList) {
+        for (Book b: booksList) {
             if (b.getAccessionNum() == accessionNum) {
                 book = b;
                 break;
             }
         }
 
-        for (LibMember m : membersList) {
+        for (LibMember m: membersList) {
             if (m.getCprNum() == cprNum) {
                 member = m;
                 break;
