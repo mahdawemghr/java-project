@@ -53,7 +53,7 @@ public class LibMember { // questions two
     }
 
     public Book[] getBookslssued() {
-        return booksIssued;
+        return booksIssued; //! check it
     }
 
     public int getNumBooksIssued() {
@@ -81,8 +81,11 @@ public class LibMember { // questions two
         this.teleNum = teleNum;
     }
 
-    public void setBookslssued(Book[] var1) {
-        booksIssued = var1;
+    public void setBooksIssued(Book[] var1) {
+    booksIssued = new Book[var1.length];
+    for (int i = 0; i < var1.length; i++) {
+        booksIssued[i] = var1[i];
+    }
     }
 
     public void setNumBooksIssued(int numBooksIssued) {
