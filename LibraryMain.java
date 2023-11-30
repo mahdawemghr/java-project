@@ -32,7 +32,7 @@ public class LibraryMain {
                     System.out.println("\t0 - Return to menu");
                     choice1 = input.nextInt();
 
-                    if(choice1 < 0 || 5 <= choice1) {
+                    if(choice1 < 0 || 6 <= choice1) {
                         System.out.println("Invalid option!");
                         TimeUnit.SECONDS.sleep(2);
                         continue;
@@ -114,7 +114,7 @@ public class LibraryMain {
                     System.out.println("\t0 - Return to menu");
                     choice1 = input.nextInt();
 
-                    if(choice1 < 0 || 5 <= choice1) {
+                    if(choice1 < 0 || 6 <= choice1) {
                         System.out.println("Invalid option!");
                         TimeUnit.SECONDS.sleep(2);
                         continue;
